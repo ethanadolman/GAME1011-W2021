@@ -117,5 +117,5 @@ void menu() {
 		default:
 			break;
 		}
-	} while (choice != '5');
+	} while (choice != 5);
 }
