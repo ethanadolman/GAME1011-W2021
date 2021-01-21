@@ -5,10 +5,12 @@ void PlatformBuilder(int p);
 void GameBuilder(int p, int g);
 void AchievementBuilder(int p, int g, int a);
 void menu();
+
 int main() {
 	menu();
 	return 0;
 }
+
 void PlatformBuilder(int p) {
 	string name, manufacturer;
 	int MAX_GAMES;
@@ -24,6 +26,7 @@ void PlatformBuilder(int p) {
 	system("cls");
 	for (int g = 0; g < MAX_GAMES; g++) { GameBuilder(p, g); }
 }
+
 void GameBuilder(int p, int g) {
 	string name, developer, publisher;
 	int MAX_ACHIEVEMENTS;

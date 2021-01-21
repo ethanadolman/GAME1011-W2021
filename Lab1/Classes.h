@@ -15,10 +15,10 @@ public:
 		this->description = description;
 		this->pointvalue = pointvalue;
 	}
-	string GetTitle() { return title; }
-	string GetDescription() { return description; }
-	int GetPointvalue() { return pointvalue; }
-	string GetInfo() { return "--------------------\nTitle: " + GetTitle() + "\nDescription: " + GetDescription() + "\nPoint Value: " + to_string(GetPointvalue()); }
+	string GetTitle() const { return title; }
+	string GetDescription() const { return description; }
+	int GetPointvalue() const { return pointvalue; }
+	string GetInfo() const { return "--------------------\nTitle: " + GetTitle() + "\nDescription: " + GetDescription() + "\nPoint Value: " + to_string(GetPointvalue()); }
 };
 
 class Game {
@@ -39,12 +39,12 @@ public:
 		achievement.shrink_to_fit();
 		if ((int)achievement.size() > MAX_ACHIEVEMENTS) { MAX_ACHIEVEMENTS = (int)achievement.size(); }
 	}
-	string GetName() { return name; }
-	string GetDeveloper() { return developer; }
-	string GetPublisher() { return publisher; }
-	int GetMax() { return MAX_ACHIEVEMENTS; }
-	string GetInfo() { return "--------------------\nName: " + GetName() + "\nDeveloper: " + GetDeveloper() + "\nPublisher: " + GetPublisher() + "\nAchievements: " + to_string(GetMax()); }
-	Achievement* GetAchievement(int i) { return achievement[i]; }
+	string GetName() const { return name; }
+	string GetDeveloper() const { return developer; }
+	string GetPublisher() const { return publisher; }
+	int GetMax() const { return MAX_ACHIEVEMENTS; }
+	string GetInfo() const { return "--------------------\nName: " + GetName() + "\nDeveloper: " + GetDeveloper() + "\nPublisher: " + GetPublisher() + "\nAchievements: " + to_string(GetMax()); }
+	Achievement* GetAchievement(int i) const { return achievement[i]; }
 };
 
 
@@ -65,12 +65,12 @@ public:
 		game.shrink_to_fit();
 		if ((int)game.size() > MAX_GAMES) { MAX_GAMES = (int)game.size(); }
 	}
-	string GetName() { return name; }
-	string GetManufacturer() { return manufacturer; }
-	int GetMax() { return MAX_GAMES; }
-	string GetInfo() { return "--------------------\nName: " + GetName() + "\nManufacturer: " + GetManufacturer() + "\nGames: " + to_string(GetMax()); }
+	string GetName() const { return name; }
+	string GetManufacturer() const { return manufacturer; }
+	int GetMax() const { return MAX_GAMES; }
+	string GetInfo() const { return "--------------------\nName: " + GetName() + "\nManufacturer: " + GetManufacturer() + "\nGames: " + to_string(GetMax()); }
 
-	Game* GetGame(int i) { return game[i]; }
+	Game* GetGame(int i) const { return game[i]; }
 	//Game* GetGame(string name) { for (int i = 0; i < MAX_GAMES; i++) { if (game[i]->GetName() == name) { return game[i]; } } }
 };
 
