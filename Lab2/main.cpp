@@ -17,21 +17,26 @@ int main()
 	float health;
 	string description, special_ability1, special_ability2;
 	double damage;
+	
 	do {
+		
 		system("cls");
 		cout << "1. Create new Character\n";
 		cout << "2. View all Characters\n";
 		cout << "3. Delete a Character\n";
 		cout << "4. Exit\n";
 		cin >> choice;
+		
 		switch (choice)
 		{
 		case 1:
+
 			system("cls");
 			cout << "1. Orc\n";
 			cout << "2. Goblin\n";
 			cout << "3. Zombie\n";
 			cin >> secondarychoice;
+			
 			switch (secondarychoice)
 			{
 			case 1:
@@ -44,37 +49,55 @@ int main()
 				character.push_back(new Zombie());
 				break;
 			}
+			
 			character.shrink_to_fit();
 			system("cls");
 			cin.ignore();
+			
+			//Set Name
 			cout << "Name: ";
 			getline(cin, name);
 			character.back()->SetName(name);
 			system("cls");
+
+			//Set Health
 			cout << "Health: ";
 			cin >> health;
 			character.back()->SetHealth(health);
 			system("cls");
 			cin.ignore();
+
+			//Set Weapon Name
 			cout << "Weapon Name: ";
 			getline(cin, name);
 			system("cls");
+
+			//Set Weapon Description
 			cout << "Weapon Description: ";
 			getline(cin, description);
 			system("cls");
+
+			//Set Weapon Damage
 			cout << "Damage: ";
 			cin >> damage;
 			system("cls");
 			cin.ignore();
+
+			//Set Special Ability 1
 			cout << "Special Ability 1: ";
 			getline(cin, special_ability1);
 			system("cls");
+
+			//Set Special Ability 2
 			cout << "Special Ability 2: ";
 			getline(cin, special_ability2);
+			
 			character.back()->SetWeapon(name, description, damage, special_ability1, special_ability2);
 			system("cls");
 			break;
+			
 		case 2:
+
 			system("cls");
 			for (int i = 0; i < character.size(); i++)
 			{
@@ -85,7 +108,9 @@ int main()
 			system("pause");
 			system("cls");
 			break;
+			
 		case 3:
+
 			system("cls");
 			for (int i = 0; i < character.size(); i++)
 			{
@@ -94,6 +119,7 @@ int main()
 				if (i != character.size() - 1) { cout << "2. Next Character\n"; }
 				else { cout << "2. Return to menu\n"; }
 				cin >> secondarychoice;
+				
 				switch(secondarychoice)
 				{
 				case 1:
@@ -106,6 +132,7 @@ int main()
 				system("cls");
 			}
 			break;
+			
 		case 4:
 			system("cls");
 			return 0;
