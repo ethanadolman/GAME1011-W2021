@@ -38,12 +38,12 @@ int main()
 		if (option == 0)
 		{
 			NonGaming.push_back(new NonGamingStudent(firstname[rand() % 40] + " " + lastname[rand() % 40], rand() % 31 + 16, college[rand() % 3], program[rand() % 4], rand() % 12 + 1, rand() % 1000, rand() % 4));
-			cout << i + 1 << ". " << NonGaming.back()->GetName() << endl;
+			cout << i + 1 << ". " << NonGaming.back()->GetName() << ", "<<NonGaming.back()->GetAge() <<endl;
 		}
 		else
 		{
 			Gaming.push_back(new GamingStudent(firstname[rand() % 40] + " " + lastname[rand() % 40], rand() % 31 + 16, college[rand() % 3], program[rand() % 4], rand() % 12 + 1, rand() % 1000, rand() % 4));
-			cout << i + 1 << ". " << Gaming.back()->GetName() << endl;
+			cout << i + 1 << ". " << Gaming.back()->GetName() << ", " << Gaming.back()->GetAge() << endl;
 		}
 	}
 	NonGaming.shrink_to_fit();
