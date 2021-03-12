@@ -4,7 +4,7 @@
 
 int main()
 {
-	cout << "creating a int table of 2 elements" << endl;
+	cout << "creating a int table of 5 elements" << endl;
 	SearchableVector<int> IntTable(5);
 	IntTable.print();
 	cout << "Attempting to pushback 75 into full array" << endl;
