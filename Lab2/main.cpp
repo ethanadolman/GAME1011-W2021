@@ -17,7 +17,6 @@ int main()
 	float health;
 	string description, special_ability1, special_ability2;
 	double damage;
-	
 	do {
 		
 		system("cls");
