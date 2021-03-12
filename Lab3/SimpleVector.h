@@ -78,6 +78,8 @@ void SimpleVector<T>::print() const
     cout << endl;
 }
 //********************************************************
+// pushes back the array                                 *
+//********************************************************
 template <class T>
 void SimpleVector<T>::push_back(T var)
 {
@@ -96,6 +98,9 @@ void SimpleVector<T>::push_back(T var)
     }
 }
 
+//********************************************************
+// pops back the array                                   *
+//********************************************************
 template <class T>
 void SimpleVector<T>::pop_back() 
 {
